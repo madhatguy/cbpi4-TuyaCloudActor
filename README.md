@@ -19,6 +19,15 @@ cbpi add cbpi4-TuyaCloudActor
 
 Restart CBPi afterwards.
 
+## Install (from GitHub on the Raspberry Pi)
+
+Use the **cbpi4 pipx environment** (do **not** use `sudo pip install ...`):
+
+```bash
+sudo pipx runpip cbpi4 install --upgrade --no-cache-dir https://github.com/<your-user>/<your-repo>/archive/refs/heads/main.zip
+cbpi add cbpi4-TuyaCloudActor
+```
+
 ## Tuya Cloud setup (Developer Platform)
 
 You need a Tuya Cloud project and API credentials.

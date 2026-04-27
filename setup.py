@@ -22,10 +22,10 @@ setup(
         "cbpi4-TuyaCloudActor": ["*", "*.txt", "*.rst", "*.yaml"],
     },
     packages=["cbpi4-TuyaCloudActor"],
-    install_requires=[
-        "cbpi>=4.0.0.33",
-        "tuya-iot-py-sdk",
-    ],
+    # CBPi is the host application and is expected to already be installed
+    # in the cbpi4 runtime environment. Keeping it out of install_requires
+    # prevents pip from trying (and potentially failing) to install/upgrade cbpi.
+    install_requires=["tuya-iot-py-sdk"],
     long_description=long_description,
     long_description_content_type="text/markdown",
 )
